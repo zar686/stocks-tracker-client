@@ -8,7 +8,7 @@ the portfolio.
 ## Important Links
 
 - [github Client](https://github.com/zar686/stocks-tracker-client)
-- [github Client](https://github.com/zar686/stocks-tracker-api)
+- [github Api](https://github.com/zar686/stocks-tracker-api)
 - [Deployed API](https://stock-tracker-app-azam.herokuapp.com/)
 - [Deployed Client](https://zar686.github.io/stocks-tracker-client/)
 
