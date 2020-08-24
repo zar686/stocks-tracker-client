@@ -7,9 +7,10 @@ the portfolio.
 
 ## Important Links
 
-- [github](https://github.com/monikan2018/StockLedger_frontend)
-- [Deployed API](https://murmuring-cliffs-14664.herokuapp.com/)
-- [Deployed Client](https://monikan2018.github.io/StockLedger_frontend/)
+- [github Client](https://github.com/zar686/stocks-tracker-client)
+- [github Client](https://github.com/zar686/stocks-tracker-api)
+- [Deployed API](https://stock-tracker-app-azam.herokuapp.com/)
+- [Deployed Client](https://zar686.github.io/stocks-tracker-client/)
 
 ## Planning Story
 
