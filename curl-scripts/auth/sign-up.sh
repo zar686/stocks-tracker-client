@@ -1,4 +1,4 @@
-curl "http://localhost:4741/sign-up" \
+curl "https://stock-tracker-app-azam.herokuapp.com//sign-up" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \

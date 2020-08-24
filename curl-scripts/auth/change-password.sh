@@ -1,4 +1,4 @@
-curl "http://localhost:4741/change-password" \
+curl "https://stock-tracker-app-azam.herokuapp.com//change-password" \
   --include \
   --request PATCH \
   --header "Authorization: Bearer ${TOKEN}" \

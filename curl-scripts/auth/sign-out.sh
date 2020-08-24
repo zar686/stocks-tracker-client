@@ -1,4 +1,4 @@
-curl "http://localhost:4741/sign-out" \
+curl "https://stock-tracker-app-azam.herokuapp.com//sign-out" \
   --include \
   --request DELETE \
   --header "Authorization: Bearer ${TOKEN}" \
