@@ -6,13 +6,12 @@ curl "http://localhost:4741/stocks" \
   --header "Content-Type: application/json" \
   --header "Authorization: Bearer ${TOKEN}" \
   --data '{
-    "transaction": {
+    "stock": {
       "name": "'"${NAME}"'",
-      "transaction_type": "'"${TYPE}"'",
-      "exchange": "'"${EXCHANGE}"'",
-      "quantity": "'"${QTY}"'"  ,
-      "date": "'"${DATE}"'" ,
-      "price": "'"${PRICE}"'"
+      "symbol": "'"${SYMBOL}"'",
+      "quantity": "'"${QUANTITY}"'"  ,
+      "price": "'"${PRICE}"'",
+      "reason": "'"${REASON}"'"
     }
   }'
 
