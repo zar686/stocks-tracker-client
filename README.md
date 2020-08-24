@@ -49,9 +49,9 @@ becomes esay and not time consuming.
 ## Images
 
 #### Wireframe:
-![wireframe]https://app.lucidchart.com/documents/view/67ad6132-e536-404c-90e1-454983461a90
+![wireframe]https://imgur.com/a/GKwrwXP
 
 ---
 
 #### ERD:
-![ERD]https://app.lucidchart.com/documents/view/cf92bf83-2c88-4265-bd08-93b8e2eb5d25
+![ERD]https://imgur.com/gallery/bUG3VXu
