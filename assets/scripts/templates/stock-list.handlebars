@@ -1,0 +1,62 @@
+{{#each stocks as |stock|}}
+  {{log stock}}
+  <section class="stock-list" data-id="{{stock.id}}">
+
+
+    <h5>
+      {{stock.name}}
+    </h5>
+    <h6>{{stock.symbol}}</h6>
+    <h6>QUANTITY: {{stock.quantity}}</h6>
+    <h6>PRICE: {{stock.price}}</h6>
+    <h6>REASON: {{stock.reason}}</h6>
+
+<!-- Update Stock Button - Trigger Modal -->
+    <button class="update-stock" type="button" data-id="{{stock._id}}" data-toggle="modal" data-target="#updateStock-{{stock._id}}">update</button>
+
+<!-- Modal -->
+
+    <div class="modal fade" id="updateStock-{{stock._id}}" tabindex="-1" role="dialog" aria-labelledby="updateStockLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">update stock</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" data-id="{{stock._id}}">
+
+            <p id="modal-message"></p>
+
+            <form class="update-stock" data-id="{{stock._id}}">
+              <h6>name:
+                <input name="stock[name]" placeholder="{{stock.name}}" type="text">
+              </h6>
+              <h6>symbol:
+                <input name="stock[symbol]" placeholder="{{stock.symbol}}" type="text">
+              </h6>
+              <h6>quantity:
+                <input name="stock[quantity]" placeholder="{{stock.quantity}}" type="number">
+              </h6>
+              <h6>price:
+                <input name="stock[price]" placeholder="{{stock.price}}" type="number">
+              </h6>
+              <h6>reason:
+                <input name="stock[reason]" placeholder="{{stock.reason}}" type="text">
+              </h6>
+              <div class="modal-footer">
+                <button type="submit" class="btn save-changes" data-id="{{stock._id}}">save changes</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Remove Stock Button -->
+  <button type="button" class="btn btn-danger destroy-stock" data-id="{{stock._id}}">REMOVE</button>
+
+  </section>
+
+{{/each}}
