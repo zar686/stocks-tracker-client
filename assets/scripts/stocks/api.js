@@ -11,7 +11,7 @@ const createStock = function (formData) {
     },
     url: config.apiUrl + '/stocks',
     method: 'POST',
-    // created Stock belongs to signed-in user
+    // created stock belongs to signed-in user
     user: store.user,
     data: formData
   })
@@ -35,7 +35,7 @@ const destroyStock = function (stockId) {
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    url: config.apiUrl + '/stocks/' + stockId,
+    url: config.apiUrl + '/stock/' + stockId,
     method: 'DELETE'
   })
 }

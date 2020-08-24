@@ -12,7 +12,7 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePassword)
 
-  // Stock Listeners:
+  // Plant Listeners:
   $('#create-stock').on('submit', stockEvents.onCreateStock)
   $('#index-stocks').on('click', stockEvents.onIndexStocks)
   $('.content').on('click', '.btn-danger', stockEvents.onDestroyStock)

@@ -4,50 +4,51 @@
 const showStocksTemplate = require('../templates/stock-list.handlebars')
 // const store = require('../store')
 
-const indexStocksSuccess = (data, hideMessage) => {
+const indexPlantsSuccess = (data, hideMessage) => {
   const showStocksHtml = showStocksTemplate({ stocks: data.stocks })
 
   if (!hideMessage) {
-    // if no stocks in list:
+    // if no stocks in collection:
     if (data.stocks.length === 0) {
       $('#message').text('no stocks in your list!')
     } else {
-      $('#message').text('look at all your stocks!')
+      $('#message').text('Stocks List!')
     }
   }
 
+  // Hide "outdated" stock collection:
   $('#content').empty()
   $('#content').append(showStocksHtml)
   $('#content').show()
 }
 
 const indexStocksFailure = () => {
-  $('#message').text('Stocks list not showing.')
+  $('#message').text('Stocks not found. Please try again')
 }
 
 const createStockSuccess = (data) => {
   const showStocksHtml = showStocksTemplate({ stocks: data.stocks })
 
-  $('#message').text('New Stock added!')
+  $('#message').text('New stock added')
   $('#content').append(showStocksHtml)
 
   $('form').trigger('reset')
 }
 
 const createStockFailure = () => {
-  $('#message').text('New stock not added')
+  $('#message').text('Stock not added')
 }
 
 const destroyStockSuccess = () => {
-  $('#message').text('Delete Success')
+  $('#message').text('Stock Deleted!')
 }
 
 const destroyStockFailure = () => {
-  $('#message').text('Delete failed')
+  $('#message').text('Delete not successful!')
 }
 
 const updateStockSuccess = (stockId) => {
-  $('#message').text('Stock updated!')
+  $('#message').text('stock updated!')
 
   $(`#updateStock-${stockId}`).modal('hide')
   // Removing show class triggers fade out transition
@@ -59,13 +60,13 @@ const updateStockSuccess = (stockId) => {
 }
 
 const updateStockFailure = () => {
-  $('#message').text('Stock not updated!')
+  $('#message').text('Stock not updated.')
 }
 
 module.exports = {
   createStockSuccess,
   createStockFailure,
-  indexStocksSuccess,
+  indexPlantsSuccess,
   indexStocksFailure,
   destroyStockSuccess,
   destroyStockFailure,

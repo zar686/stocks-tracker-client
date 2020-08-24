@@ -1,16 +1,21 @@
-curl "http://localhost:4741/stocks/${ID}" \
+#!/bin/bash
+
+API="http://localhost:4741"
+URL_PATH="/stocks"
+
+curl "${API}${URL_PATH}/${ID}" \
   --include \
   --request PATCH \
-  --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
+  --header "Authorization: Bearer ${TOKEN}" \
   --data '{
-    "stock": {
-      "name": "'"${NAME}"'",
-      "symbol": "'"${SYMBOL}"'",
-      "quantity": "'"${QUANTITY}"'",
-      "price": "'"${PRICE}"'",
-      "reason": "'"${REASON}"'"
-    }
+  "stock": {
+    "name": "'"${NAME}"'",
+    "symbol": "'"${SYMBOL}"'",
+    "quantity": "'"${QUANTITY}"'"  ,
+    "price": "'"${PRICE}"'",
+    "reason": "'"${REASON}"'"
+   }
   }'
 
 echo

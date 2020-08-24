@@ -10,17 +10,17 @@ $('#authenticated').hide()
 
 // Sign Up:
 const signUpSuccess = function () {
-  $('#message').text('You are signed up! sign in to continue!')
+  $('#message').text('Sign Up successful!')
 
   $('form').trigger('reset')
 }
 const signUpFailure = function () {
-  $('#message').text('sign up failed! please try again!')
+  $('#message').text('Sign up failed!')
 }
 
 // Sign In:
 const signInSuccess = function (response) {
-  $('#message').text('signed in successfully! ')
+  $('#message').text('signed in!')
 
   store.user = response.user
 
@@ -32,34 +32,34 @@ const signInSuccess = function (response) {
 }
 
 const signInFailure = function () {
-  $('#message').text('sign in failed!')
+  $('#message').text('Sign in failed')
 }
 
 // Sign Out:
 const signOutSuccess = function () {
-  $('#message').text('Sign Out Successful!')
+  $('#message').text('Sign out successful')
 
   // Show only sign up and sign in again:
   $('#unauthenticated').show()
   // $('#sign-up').show()
   $('#authenticated').hide()
-  // hide Stocks collection when signing back in after clicking see all Stocks and then signing out:
+  // hide stock collection when signing back in after clicking see all stocks and then signing out:
   $('#content').hide()
 
   store.user = null
 }
 const signOutFailure = function () {
-  $('#message').text('Sign Out Failed! Please try again.')
+  $('#message').text('sign out failed')
 }
 
 // Change Password:
 const changePasswordSuccess = function () {
-  $('#message').text('Password changed successfully!')
+  $('#message').text('Password successfully changed')
 
   $('form').trigger('reset')
 }
 const changePasswordFailure = function () {
-  $('#message').text('Password change failed! Please try again')
+  $('#message').text('Password change not successful')
 }
 
 module.exports = {

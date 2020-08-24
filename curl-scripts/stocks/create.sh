@@ -1,15 +1,18 @@
+#!/bin/bash
+
 curl "http://localhost:4741/stocks" \
   --include \
   --request POST \
-  --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
+  --header "Authorization: Bearer ${TOKEN}" \
   --data '{
-    "stock": {
+    "transaction": {
       "name": "'"${NAME}"'",
-      "symbol": "'"${SYMBOL}"'",
-      "quantity": "'"${QUANTITY}"'",
-      "price": "'"${PRICE}"'",
-      "reason": "'"${REASON}"'"
+      "transaction_type": "'"${TYPE}"'",
+      "exchange": "'"${EXCHANGE}"'",
+      "quantity": "'"${QTY}"'"  ,
+      "date": "'"${DATE}"'" ,
+      "price": "'"${PRICE}"'"
     }
   }'
 

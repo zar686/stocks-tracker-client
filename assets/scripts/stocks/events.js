@@ -20,7 +20,7 @@ const onCreateStock = function (event) {
     .catch(ui.createStockFailure)
 }
 
-// GET/INDEX (see all stocks)
+// GET/INDEX (see all plants)
 // pass in hideMessage as argument so create/update/destroy messages show
 const onIndexStocks = function (event, hideMessage) {
   event.preventDefault()
@@ -30,14 +30,14 @@ const onIndexStocks = function (event, hideMessage) {
     .catch(ui.indexStocksFailure)
 }
 
-// DESTROY (remove selected Stock)
+// DESTROY (remove selected plant)
 const onDestroyStock = function (event) {
   event.preventDefault()
 
-  // get id for stock who's remove button was clicked
+  // get id for plant who's remove button was clicked
   const stockId = $(event.target).data('id')
-  // console.log('this is stockId:' + stockId)
-  api.destroyStock(stockId)
+
+  api.destroyPlant(stockId)
     .then(ui.destroyStockSuccess)
     // pass in true to show destroySuccess message
     .then(() => onIndexStocks(event, true))
