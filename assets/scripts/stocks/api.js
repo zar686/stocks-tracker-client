@@ -35,7 +35,7 @@ const destroyStock = function (stockId) {
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    url: config.apiUrl + '/stock/' + stockId,
+    url: config.apiUrl + '/stocks/' + stockId,
     method: 'DELETE'
   })
 }

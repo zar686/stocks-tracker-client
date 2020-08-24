@@ -37,7 +37,7 @@ const onDestroyStock = function (event) {
   // get id for plant who's remove button was clicked
   const stockId = $(event.target).data('id')
 
-  api.destroyPlant(stockId)
+  api.destroyStock(stockId)
     .then(ui.destroyStockSuccess)
     // pass in true to show destroySuccess message
     .then(() => onIndexStocks(event, true))

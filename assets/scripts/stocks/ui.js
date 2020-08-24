@@ -4,7 +4,7 @@
 const showStocksTemplate = require('../templates/stock-list.handlebars')
 // const store = require('../store')
 
-const indexPlantsSuccess = (data, hideMessage) => {
+const indexStocksSuccess = (data, hideMessage) => {
   const showStocksHtml = showStocksTemplate({ stocks: data.stocks })
 
   if (!hideMessage) {
@@ -66,7 +66,7 @@ const updateStockFailure = () => {
 module.exports = {
   createStockSuccess,
   createStockFailure,
-  indexPlantsSuccess,
+  indexStocksSuccess,
   indexStocksFailure,
   destroyStockSuccess,
   destroyStockFailure,

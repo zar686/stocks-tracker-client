@@ -3,7 +3,7 @@
 let apiUrl
 const apiUrls = {
   production: 'https://stock-tracker-app-azam.herokuapp.com/',
-  development: 'http://localhost:7165'
+  development: 'http://localhost:4741'
 }
 
 if (window.location.hostname === 'localhost') {
